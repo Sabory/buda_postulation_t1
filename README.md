@@ -10,7 +10,7 @@ sin color o Roja (see `./Tarea_Buda.com_-_Metro.pdf)`
 It's important to note that when a train is express, it can stop only stations with no color or to it's own color. But can still use the rails with other colors. 
 
 For example, we use the given example to show this:
-```{mermaid}
+```mermaid
 flowchart LR
     A <--> B
     B <--> C
@@ -27,7 +27,7 @@ flowchart LR
 The green train can still pass through the `H` Station but without stopping. So, according to the example, one of the shortest path between `A & F` for a green train, would be `A -> B -> C -> G -> I -> F`
 
 So, if we have the following stations:
-```{mermaid}
+```mermaid
 flowchart LR
     A <--> B
     B <--> C
@@ -81,7 +81,7 @@ The file consists in 3 main parts:
 
 ```
 The previous json setting would be the following:
-```{mermaid}
+```mermaid
 flowchart LR
     A <--> B:::red <--> C
     classDef red fill:#ff1500;
