@@ -3,7 +3,7 @@ from rich.console import Console
 from rich.markdown import Markdown
 import copy
 import json
-from typing import Optional, List
+from typing import Optional
 import click
 
 console = Console()
@@ -38,7 +38,8 @@ console = Console()
 )
 def main(
     graph_json_path: str, root: str, goal: str, color: Optional[str] = None
-) -> List:
+) -> list:
+    # Main execution. Support click option commands.
     res = get_shortest_path(graph_json_path, root, goal, color)
     return res
 
@@ -48,8 +49,8 @@ def get_shortest_path(
     root: str,
     goal: str,
     color: Optional[str] = None,
-) -> List:
-    """Get shortest path between two nodes in a graph.
+) -> list:
+    """Get shortest path between two nodes in a given dict graph.
     Args:
         graph: A graph represented as a dictionary.
         root: The root node.
